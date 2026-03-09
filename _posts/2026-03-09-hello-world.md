@@ -2,6 +2,7 @@
 layout: post
 title: 你好，我是 ninki！
 date: 2026-03-09 10:00:00 +0800
+categories: 介绍
 tags: [介绍, 关于我]
 ---
 
