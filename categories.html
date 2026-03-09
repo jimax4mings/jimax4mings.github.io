@@ -1,0 +1,47 @@
+---
+layout: page
+title: '分类'
+---
+
+{%- comment -%}
+  预定义的分类顺序
+{%- endcomment -%}
+{% assign predefined_categories = "介绍,情感,生活,技术" | split: "," %}
+{%- comment -%}
+  预定义分类的内容
+{%- endcomment -%}
+{% for cat_name in predefined_categories %}
+  {% assign posts = site.categories[cat_name] %}
+  {% if posts.size > 0 %}
+    <div id="cat-{{ cat_name }}" class="category-section">
+      <h2>{{ cat_name }}</h2>
+      <div class="post-list">
+        {% for post in posts %}
+          <div class="tag-entry">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <span class="entry-date">{{ post.date | date: "%Y.%m.%d" }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+{% endfor %}
+
+{% comment %}
+  如果有未在预定义列表中的分类，也显示出来
+{% endcomment %}
+{% for category in site.categories %}
+  {% unless predefined_categories contains category[0] %}
+    <div id="cat-{{ category[0] }}" class="category-section">
+      <h2>{{ category[0] }}</h2>
+      <div class="post-list">
+        {% for post in category[1] %}
+          <div class="tag-entry">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <span class="entry-date">{{ post.date | date: "%Y.%m.%d" }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endunless %}
+{% endfor %}

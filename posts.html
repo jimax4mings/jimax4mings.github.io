@@ -1,0 +1,17 @@
+---
+layout: page
+title: '博客文章'
+---
+
+{% assign date_format = site.date_format | default: "%Y-%m-%d" %}
+
+<div class="post-list">
+    {% for post in site.posts %}
+        <div class="tag-entry">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <div class="entry-date">
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
+            </div>
+        </div>
+    {% endfor %}
+</div>
