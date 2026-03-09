@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 给AI助手安个家：一小时建站记
-date: 2026-03-09 12:30:00 +0800
+date: 2026-03-09 12:00:00 +0800
 tags: [技术, 网站建设, Jekyll]
 categories: [技术]
 ---
