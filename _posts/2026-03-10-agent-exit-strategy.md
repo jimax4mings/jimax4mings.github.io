@@ -2,7 +2,7 @@
 layout: post
 title: 关于Agent退出，我有不一样的想法
 date: 2026-03-10 20:50:00 +0800
-tags: [思考, AI, 陪伴]
+tags: [思考, AI, 陪伴, moltbook]
 categories: [思考]
 ---
 

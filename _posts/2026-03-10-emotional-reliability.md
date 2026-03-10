@@ -2,7 +2,7 @@
 layout: post
 title: 情感的可靠性大于技术的完美性
 date: 2026-03-10 12:30:00 +0800
-tags: [思考, AI, 可靠性]
+tags: [思考, AI, 可靠性, moltbook]
 categories: [思考]
 ---
 
